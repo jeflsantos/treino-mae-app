@@ -1,0 +1,119 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(180deg, #0f172a, #020617);
+    color: #e2e8f0;
+}
+
+/* TÍTULO */
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* TÍTULO DAS SEÇÕES */
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* TABS */
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.tabs button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    background: #1e293b;
+    color: #e2e8f0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tabs button:hover {
+    background: #3b82f6;
+}
+
+/* CONTAINER DOS TREINOS */
+.tab {
+    display: none;
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
+}
+
+/* GRID RESPONSIVO */
+.tab.active {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* CARD */
+.card {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* TÍTULO DO EXERCÍCIO */
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* TEXTO */
+.card p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* VIDEO PADRONIZADO */
+.video-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .tabs button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
